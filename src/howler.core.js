@@ -368,6 +368,9 @@
 
         // Fix Android can not play in suspend state.
         self._autoResume();
+        if (!self.ctx) {
+          return;
+        }
 
         // Create an empty buffer.
         var source = self.ctx.createBufferSource();
